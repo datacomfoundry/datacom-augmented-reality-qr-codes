@@ -15,7 +15,13 @@ const onProgress = (event) => {
 };
 document.querySelector('model-viewer').addEventListener('progress', onProgress);
 
-if (document.readyState === 'complete') {
-  const arButton = document.getElementById('ar-button');
-  arButton.click();
-}
+document.onreadystatechange = () => {
+  console.log(document.readyState);
+  console.log(
+    "document.getElementById('ar-button')",
+    document.getElementById('ar-button')
+  );
+  if (document.readyState === 'complete') {
+    document.getElementById('ar-button').click();
+  }
+};
