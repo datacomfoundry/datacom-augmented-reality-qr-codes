@@ -2,11 +2,10 @@
 const onProgress = (event) => {
   const progressBar = event.target.querySelector('.progress-bar');
   const updatingBar = event.target.querySelector('.update-bar');
-  const arButton = document.getElementById('ar-button');
+
   updatingBar.style.width = `${event.detail.totalProgress * 100}%`;
   if (event.detail.totalProgress === 1) {
     progressBar.classList.add('hide');
-    arButton.click();
   } else {
     progressBar.classList.remove('hide');
     if (event.detail.totalProgress === 0) {
@@ -15,3 +14,8 @@ const onProgress = (event) => {
   }
 };
 document.querySelector('model-viewer').addEventListener('progress', onProgress);
+
+if (document.readyState === 'complete') {
+  const arButton = document.getElementById('ar-button');
+  arButton.click();
+}
