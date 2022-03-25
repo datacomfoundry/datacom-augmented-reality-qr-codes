@@ -1,7 +1,3 @@
-function load() {
-  document.getElementById('ar-button').click();
-}
-
 // Handles loading the events for <model-viewer>'s slotted progress bar
 const onProgress = (event) => {
   const progressBar = event.target.querySelector('.progress-bar');
@@ -17,4 +13,4 @@ const onProgress = (event) => {
   }
 };
 document.querySelector('model-viewer').addEventListener('progress', onProgress);
-window.onload = load;
+document.getElementById('ar-button').click();
