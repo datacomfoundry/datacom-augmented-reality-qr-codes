@@ -20,6 +20,6 @@ function clickButton() {
 
 document.onreadystatechange = () => {
   if (document.readyState === 'complete') {
-    setTimeout(clickButton, 500);
+    clickButton();
   }
 };
