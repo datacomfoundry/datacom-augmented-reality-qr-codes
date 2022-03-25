@@ -13,4 +13,4 @@ const onProgress = (event) => {
   }
 };
 document.querySelector('model-viewer').addEventListener('progress', onProgress);
-document.getElementsByClassName('slot ar-button').click();
+document.getElementsByClassName('ar-button').click();
