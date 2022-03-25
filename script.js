@@ -13,4 +13,4 @@ const onProgress = (event) => {
   }
 };
 document.querySelector('model-viewer').addEventListener('progress', onProgress);
-document.getElementById('myButton').click();
+document.querySelector('.ar-button').click();
