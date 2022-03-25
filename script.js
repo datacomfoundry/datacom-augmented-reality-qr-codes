@@ -14,14 +14,14 @@ const onProgress = (event) => {
   }
 };
 document.querySelector('model-viewer').addEventListener('progress', onProgress);
+function clickButton() {
+  document.getElementById('ar-button').click();
+  console.log('clicked');
+}
 
 document.onreadystatechange = () => {
-  console.log(document.readyState);
-  console.log(
-    "document.getElementById('ar-button')",
-    document.getElementById('ar-button')
-  );
   if (document.readyState === 'complete') {
-    document.getElementById('ar-button').click();
+    setTimeout(clickButton, 5000);
+    console.log('ready');
   }
 };
