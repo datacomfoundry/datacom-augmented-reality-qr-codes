@@ -14,12 +14,13 @@ const onProgress = (event) => {
   }
 };
 document.querySelector('model-viewer').addEventListener('progress', onProgress);
+
 function clickButton() {
   document.getElementById('ar-button').click();
 }
 
 document.onreadystatechange = () => {
   if (document.readyState === 'complete') {
-    clickButton();
+    setTimeout(clickButton, 500);
   }
 };
