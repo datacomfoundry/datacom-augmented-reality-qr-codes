@@ -21,6 +21,7 @@ function clickButton() {
 
 document.onreadystatechange = () => {
   if (document.readyState === 'complete') {
+    console.log('complete');
     setTimeout(clickButton, 2000);
   }
 };
