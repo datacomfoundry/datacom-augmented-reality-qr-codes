@@ -21,7 +21,22 @@ function clickButton() {
 
 document.onreadystatechange = () => {
   if (document.readyState === 'complete') {
-    console.log('complete');
     setTimeout(clickButton, 2000);
   }
 };
+
+// Selects a random 3D model to be displayed within model-viewer window
+
+const astroRobotModel = "https://foundryar.blob.core.windows.net/datacom-qr-code/astronaut_avatar.glb"
+const iceCreamManModel = "https://foundryar.blob.core.windows.net/datacom-qr-code/icecream_avatar.glb"
+
+const array = [astroRobotModel, iceCreamManModel]
+
+const chooseModel = array[getRandomInt(2)]
+
+let elem = document.getElementById('model-viewer');
+elem.src = chooseModel;
+
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}

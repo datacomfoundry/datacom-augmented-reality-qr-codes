@@ -13,15 +13,15 @@
 
 <body>
   <!-- <model-viewer> HTML element -->
-  <model-viewer bounds="tight" enable-pan src="BrainStem.glb" ar ar-modes="scene-viewer webxr quick-look"
-    camera-controls environment-image="neutral" poster="poster.webp" shadow-intensity="1" autoplay>
+  <model-viewer id="model-viewer" bounds="tight" enable-pan ar ar-modes="scene-viewer webxr quick-look" camera-controls
+    environment-image="neutral" shadow-intensity="1" autoplay>
     <div class="progress-bar hide" slot="progress-bar">
       <div class="update-bar"></div>
     </div>
     <button slot="ar-button" id="ar-button">
       View in your space.
     </button>
-    <div id="ar-prompt">
+    <div class="center-pre-prompt" id="ar-prompt">
       <img src="ar_hand_prompt.png">
     </div>
   </model-viewer>
