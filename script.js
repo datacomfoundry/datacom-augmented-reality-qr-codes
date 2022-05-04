@@ -53,8 +53,14 @@ const chooseModel = array[getRandomInt(2)];
 const chooseIosModel = arrayIos[getRandomInt(4)];
 
 let elem = document.getElementById('model-viewer');
-elem.src =
-  getMobileOperatingSystem() == 'Android' ? chooseModel : chooseIosModel;
+
+if (getMobileOperatingSystem() == 'Android') {
+  console.log('Android');
+  elem.src = chooseModel;
+} else if (getMobileOperatingSystem() == 'iOS') {
+  console.log('iOS');
+  elem['ios-src'] = chooseIosModel;
+}
 
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
