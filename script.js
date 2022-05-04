@@ -30,12 +30,20 @@ document.onreadystatechange = () => {
 const astroRobotModel = "https://foundryar.blob.core.windows.net/datacom-qr-code/astronaut_avatar.glb"
 const iceCreamManModel = "https://foundryar.blob.core.windows.net/datacom-qr-code/icecream_avatar.glb"
 
+const lunarRoverIosModel = "https://foundryar.blob.core.windows.net/datacom-qr-code/LunarRover_English.reality"
+const habIosModel = "https://foundryar.blob.core.windows.net/datacom-qr-code/hab_en.reality"
+const cosmonautIosModel = "https://foundryar.blob.core.windows.net/datacom-qr-code/CosmonautSuit_en.reality"
+const iceCreamManIosModel = "https://foundryar.blob.core.windows.net/datacom-qr-code/high_poly_icecream_avatar.usdz"
+
 const array = [astroRobotModel, iceCreamManModel]
+const arrayIos = [lunarRoverIosModel, habIosModel, cosmonautIosModel, iceCreamManIosModel]
 
 const chooseModel = array[getRandomInt(2)]
+const chooseIosModel = arrayIos[getRandomInt(4)]
 
 let elem = document.getElementById('model-viewer');
 elem.src = chooseModel;
+elem['ios-src'] = chooseIosModel;
 
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
